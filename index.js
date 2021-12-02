@@ -21,7 +21,7 @@ res.attachment('output.mp3');
   //url = req.query.url;
 ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-video-784.mp4')
 
-        .toformat('mp3')
+        .toFormat('mp3')
 
         .on('end', function() {                    
 
