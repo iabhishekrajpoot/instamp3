@@ -10,8 +10,6 @@ app.get('/', (re, res) => {
 });
 
 app.get("/api", async (req, res) => {
-  res.attachment('output.mp3');
-  res.contentType('audio/mpeg');
   url = decodeURIComponent(req.query.url);
 
 ffmpeg(url)
@@ -23,6 +21,9 @@ ffmpeg(url)
         console.log('error: ' + error.message);
         })
  .pipe(res,{end:true})
+  res.attachment('output.mp3');
+  res.contentType('audio/mpeg');
+
 });
 
 
