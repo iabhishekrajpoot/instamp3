@@ -29,13 +29,14 @@ ffmpeg(url)
 
            // callback(null);
 
-        }).on('error', function(err){
+        })
+// .on('error', function(err){
 
            // console.log('error: ', e.code, e.msg);
 
             callback(err);
 
-        })
+        }) //
         .pipe(res,{end:true})
 });
 
