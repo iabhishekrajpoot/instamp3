@@ -11,7 +11,7 @@ app.get('/', (re, res) => {
 
 app.get("/api", async (req, res) => {
   url = decodeURIComponent(req.query.url);
-
+  filename = math.floor(math.random() * 1000000);
 ffmpeg(url)
  .toFormat('mp3')
  .on('end', function() {                    
@@ -21,7 +21,7 @@ ffmpeg(url)
         console.log('error: ' + error.message);
         })
  .pipe(res,{end:true})
-  res.attachment('output.mp3');
+  res.attachment(filename + '.mp3');
   res.contentType('audio/mpeg');
 
 });
