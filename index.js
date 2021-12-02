@@ -13,9 +13,11 @@ const app = express;
 
  */
 
+app.get('/', (req, res)=>{
+res.send("running");
+});
 
-
-app.get("/", async (req,res) => {
+app.get("/api", async (req, res) => {
 res.attachment('output.mp3');
   res.contentType('audio/mp3');
   url = req.query.url;
@@ -27,16 +29,16 @@ ffmpeg(url)
 
             console.log('conversion ended');
 
-           // callback(null);
+        
 
         })
-// .on('error', function(err){
+.on('error', function(error){
 
-           // console.log('error: ', e.code, e.msg);
+           console.log('error: ' + error.message);
 
-            //callback(err);
+          
 
-       // })
+
         .pipe(res,{end:true})
 });
 
