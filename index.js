@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get("/api", async (req, res) => {
-  url = decodeURIComponent(req.query.url);
+  url = decodeURI(req.query.url);
   filename = 'ReelAudio-' + Math.floor(Math.random() * 100000);
 ffmpeg(url)
  .toFormat('mp3')
