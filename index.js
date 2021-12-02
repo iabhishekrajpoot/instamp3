@@ -17,9 +17,9 @@ const app = express;
 
 app.get("/", async (req,res) => {
   url = req.query.url;
-ffmpeg(url)
+ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-video-784.mp4')
 
-        .toformat('mp3')
+        .output('output.mp3')
 
         .on('end', function() {                    
 
@@ -33,8 +33,8 @@ ffmpeg(url)
 
             callback(err);
 
-        })
-        .pipe(res,{end:true});
+        });
+        //.pipe(res,{end:true});
 
 });
 app.listen(3000,() => console.log("running 3000"));
