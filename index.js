@@ -34,9 +34,9 @@ ffmpeg(url)
 
            // console.log('error: ', e.code, e.msg);
 
-            callback(err);
+            //callback(err);
 
-        }) //
+       // })
         .pipe(res,{end:true})
 });
 
