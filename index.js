@@ -4,7 +4,7 @@ var ffmpeg = require('fluent-ffmpeg');
 const app = express;
 
 app.get('/', (req, res) => {
- url = decodeURIComponent(req.query.url);
+ url = decodeURI(req.query.url);
  res.send("running");
  console.log(url);
 });
