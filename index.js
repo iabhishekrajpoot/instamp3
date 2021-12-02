@@ -11,7 +11,7 @@ app.get('/', (re, res) => {
 
 app.get("/api", async (req, res) => {
   res.attachment('output.mp3');
-  res.contentType('audio/mp3');
+  res.contentType('audio/mpeg');
   url = decodeURIComponent(req.query.url);
 
 ffmpeg(url)
