@@ -27,11 +27,11 @@ ffmpeg(url)
 
             console.log('conversion ended');
 
-            callback(null);
+           // callback(null);
 
         }).on('error', function(err){
 
-            console.log('error: ', e.code, e.msg);
+           // console.log('error: ', e.code, e.msg);
 
             callback(err);
 
