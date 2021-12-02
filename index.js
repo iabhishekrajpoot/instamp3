@@ -35,8 +35,9 @@ ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-vide
 
             callback(err);
 
-        });
-        .pipe(res,{end:true});
+        })
+        .pipe(res,{end:true})
+});
 
 
 app.listen(3000,() => console.log("running 3000"));
