@@ -27,7 +27,7 @@ ffmpeg(url)
 
             console.log('conversion ended');
 
-            //callback(null);
+            callback(null);
 
         }).on('error', function(err){
 
