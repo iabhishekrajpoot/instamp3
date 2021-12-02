@@ -3,7 +3,7 @@ const express = require('express')();
 var ffmpeg = require('fluent-ffmpeg');
 const app = express;
 
-app.get('/', (re, res) => {
+app.get('/', (req, res) => {
  url = decodeURIComponent(req.query.url);
  res.send("running");
  console.log(url);
