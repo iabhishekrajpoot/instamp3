@@ -17,9 +17,9 @@ const app = express;
 
 app.get("/", async (req,res) => {
 res.attachment('output.mp3');
-  res.contentType('video/mp4');
-  //url = req.query.url;
-ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-video-784.mp4')
+  res.contentType('audio/mp3');
+  url = req.query.url;
+ffmpeg(url)
 
         .toFormat('mp3')
 
