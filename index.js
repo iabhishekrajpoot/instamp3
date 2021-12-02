@@ -14,7 +14,9 @@ const app = express;
  */
 
 app.get('/', (req, res)=>{
+url = req.query.url;
 res.send("running");
+console.log(url);
 });
 
 app.get("/api", async (req, res) => {
