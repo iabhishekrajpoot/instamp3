@@ -1,7 +1,7 @@
 
-const express = require('express')();
+//const express = require('express')();
 var ffmpeg = require('fluent-ffmpeg');
-const app = express;
+//const app = express;
 
 /**
 
@@ -15,8 +15,9 @@ const app = express;
 
 
 
-app.get("/", async (req,res) => {
-  url = req.query.url;
+//app.get("/", async (req,res) => {
+
+  //url = req.query.url;
 ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-video-784.mp4')
 
         .output('output.mp3')
@@ -36,5 +37,5 @@ ffmpeg('https://www.statuslagao.com/whatsapp/videos/new/new-whatsapp-status-vide
         });
         //.pipe(res,{end:true});
 
-});
-app.listen(3000,() => console.log("running 3000"));
+
+//app.listen(3000,() => console.log("running 3000"));
