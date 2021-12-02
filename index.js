@@ -14,7 +14,7 @@ const app = express;
  */
 
 app.get('/', (req, res)=>{
-url = req.query.url;
+url = decodeURIComponent(req.query.url);
 res.send("running");
 console.log(url);
 });
@@ -22,7 +22,8 @@ console.log(url);
 app.get("/api", async (req, res) => {
 res.attachment('output.mp3');
   res.contentType('audio/mp3');
-  url = req.query.url;
+  url = decodeURIComponent(req.query.url);
+
 ffmpeg(url)
 
         .toFormat('mp3')
